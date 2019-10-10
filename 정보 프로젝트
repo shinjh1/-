@@ -13,11 +13,7 @@ import numpy as np
 vi = int(input("초기속력을 입력하세요:"))
 a = int(input("가속도를 입력하세요:"))
 vf = int(input("최종속력을 입력하세요:"))
-t = int(input("진행시간을 입력하세요:"))
-
-if a != 0 and vf!=0 :
-    print('가속도와 최종속력 둘중 하나는 0이어야 합니다.')
-    
+t = int(input("진행시간을 입력하세요:"))    
     
 if a == 0 :
     a = (vf - vi) / t
@@ -38,8 +34,7 @@ if a == 0 :
     plt.ylabel('distance(m)')
     plt.title('시간-거리 그래프')
     plt.show()
-
-if vf == 0 :
+elif vf == 0 :
     vf = vi + a*t
     d = (vf**2 - vi**2) / (2*a)  
     print("최종속력은", vf, "m/s 입니다.")  
@@ -58,3 +53,6 @@ if vf == 0 :
     plt.ylabel('distance(m)')
     plt.title('시간-거리 그래프')
     plt.show()
+else :
+    if vf = vi + a * t:
+        print('가능')
